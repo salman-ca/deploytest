@@ -19,14 +19,14 @@ default: &default
 
 development:
   <<: *default
-  database: deploytest_development
+  database: fuweb_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: deploytest_test
+  database: fuweb_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -49,6 +49,7 @@ test:
 #
 production:
   <<: *default
-  database: deploytest_production
-  username: deploytest
-  password: <%= ENV['DEPLOYTEST_DATABASE_PASSWORD'] %>
+  database: fuweb_production
+  host: 127.0.0.1
+  username: fuweb
+  password: hello123
