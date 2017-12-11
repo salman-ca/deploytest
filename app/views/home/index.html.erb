@@ -1,2 +1,5 @@
 <h1>Home#index blah!</h1>
 <p>Find me in app/views/home/index.html.erb</p>
+<% @posts.each do |post| %>
+  <li><%= post.name %>
+<% end %>
